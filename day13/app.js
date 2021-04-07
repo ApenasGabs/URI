@@ -1,14 +1,15 @@
 var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split(' ');
+var [A, B, C] = input.split(' ').map(item => parseFloat(item));
+var pi = 3.14159
 
-var A = lines.shift()
-var B = lines.shift()
-var C = lines.shift()
+var triangulo = (A * C) / 2
+var circulo = pi*Math.pow(C, 2)
 
-
-var triangulo = (A*C)/2
-// var círculo de raio C. (pi = 3.14159)
-// var trapézio  A e B por bases e C por altura.
-// var quadrado que tem lado B.
-// var retângulo que tem lados A e B
-console.log(triangulo);
+var trapezio = (A + B) * (C /2)
+var quadrado = B*B
+var retangulo = A * B
+console.log("TRIANGULO:",triangulo.toFixed(3));
+console.log("CIRCULO:",circulo.toFixed(3));
+console.log("TRAPEZIO:",trapezio.toFixed(3));
+console.log("QUADRADO:",quadrado.toFixed(3));
+console.log("RETANGULO:",retangulo.toFixed(3));
