@@ -6,4 +6,4 @@ var Tmin = parseInt(totsec%3600)
 var min = parseInt(Tmin/60)
 var sec = parseInt(Tmin%60)
 
-console.log(hr+":"+min+":"+ sec);
+console.log(`${hr}:${min}:${sec}`);
